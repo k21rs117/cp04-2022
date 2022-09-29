@@ -181,6 +181,8 @@
     function btnAClick(e){
         active = true;
         startTime = new Date();
+
+        
         
         
     }
@@ -215,6 +217,11 @@
         if(rest<=0){
             active = false;
             alarm();
+        }
+        if(active == true){
+            $("#btnA").prop("disabled", true);
+        }else{
+            $("#btnA").prop("disabled", false);
         }        
         
     } 
